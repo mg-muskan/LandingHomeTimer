@@ -1,11 +1,11 @@
 // const semicircle = document.querySelectorAll('.semicircle');
 var semicircle = document.getElementsByClassName('landing-clock-semicircle');
 const timer = document.getElementById('landing-clock-timer');
-const clockVisible = document.getElementsByClassName('landing-home-clock');
-const clockHeading = document.getElementsByClassName('landing-home-clock-heading');
+const clockVisible = document.getElementById('landing-home-clock');
+const clockHeading = document.getElementById('landing-home-clock-heading');
 
 const day = 4;
-const hr = 0;
+const hr = 5;
 const min = 5;
 const sec = 5;
 
@@ -89,8 +89,6 @@ function countDownTimer() {
         semicircle[1].style.backgroundColor = "red";
         
         timer.innerHTML = `
-        <div>${mins}m</div>
-        <div class="colon">:</div>
         <div>${secs}s</div>
         `;
 
@@ -114,8 +112,11 @@ function countDownTimer() {
 
         timer.style.color = "lightgray";
 
-        clockVisible.innerHTML = ``;
-        clockHeading.innerHTML = `<h4><b>Registrations started!</b></h4>`;
+        clockVisible.style.display = 'none';
+        clockVisible.style.height = '0px';
+        clockVisible.style.visibility = 'hidden';
+        clockHeading.innerHTML = '<h4><b>Registrations started!</b></h4>';
+        clockHeading.style.marginTop = '-80px';
 
     }
 
