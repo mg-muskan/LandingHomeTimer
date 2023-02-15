@@ -1,0 +1,19 @@
+@media (max-width: 767px) {
+    .landing #home .image img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .landing #home .details #home-heading h3 {
+        font-size: 30px;
+    }
+    
+    .landing #home .details .btn-general {
+        font-size: 12px;
+    }
+    
+    .landing #home .details .rest h5 {
+        font-size: 18px;
+    }
+
+}

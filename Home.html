@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- Bootstrap live Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- Font-Awesome -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="https://kit.fontawesome.com/9d24440128.js" crossorigin="anonymous"></script>
+    <!-- Personal Css -->
+    <link rel="stylesheet" href="css/style-landing.css">
+    <!-- Personal Responsive CSS -->
+    <link rel="stylesheet" href="css/style-landing-resp.css">
+
+    <link rel="stylesheet" href="css/landing-timer.css">
+    <!-- Project already present Css -->
+    <!-- <link rel="stylesheet" href="../indexcss.css"> -->
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Landing Page Home -->
+    <section class="landing">
+
+        <div class="container landing-home" id="home">
+            <div class="row justify-content-center landing-home-contain-box">
+
+                <div class="col-md-6">
+                    <div class="image">
+                        <img src="http://endiavolve.com/frontend/img/index/home.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="col-10 col-md-6 landing-home-text-box">
+                    <div class="details my-2">
+                        <div class="details-inner">
+                            <div class="rest">
+                                <h2 class="landing-home-text-box-heading"><b>Get Guaranteed Job!</b></h2>
+                                <h4 class="landing-home-text-box-heading-latter">The decent package, 
+                                    whether you are in any branch of engineering.</h4> 
+                                <h5>"Unlock your potential with <b>ENDIAVOLVE</b> the E-Learning platform designed to give 
+                                    engineering students the skills and knowledge they need to succeed."</h5>
+                            </div>
+                            <div class="landing-home-heading-row row">
+                                <div class="landing-home-heading-left col-auto">
+                                    <div id="home-heading" class="animated zoomIn">
+                                        <h3>ENDIAVOLVE<br> </h3>
+                                    </div>
+                                    <div id="home-btn" class="animated zoomIn">
+                                        <a class="btn btn-general btn-black" href="aboutus.php" role="button" title="click me"><i class="fa-solid fa-circle-arrow-right"></i>click for more</a>
+                                    </div>
+                                </div>
+                            </div>    
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+            <div class="landing-home-clock landing-home-clock-center col-11 col-lg-auto">
+
+                <!-- Progress Indicator -->
+                <div class="landing-clock-circle-container landing-home-clock-center">
+                    <div class="landing-clock-semicircle" id="landing-clock-semicircle"></div>
+                    <div class="landing-clock-semicircle" id="landing-clock-semicircle"></div>
+                    <div class="landing-clock-semicircle" id="landing-clock-semicircle"></div>
+                    <div class="landing-clock-outermost-circle"></div>
+                </div>
+
+                <!-- Timer -->
+                <div class="landing-clock-timer-container landing-home-clock-center">
+                    <div class="landing-clock-timer landing-home-clock-center" id="landing-clock-timer"></div>
+                </div>
+
+            </div>   
+            
+            <!-- Time Remaining Heading -->
+            <div class="landing-home-clock-heading col-11 col-lg-auto">
+                <h4><b>Registrations will start on 20th February</b></h4>
+            </div> 
+        </div>
+
+    </section>
+    <!-- END Landing Page Home -->
+
+    <script src="js/landing-timer.js"></script>
+
+</body>
+</html>

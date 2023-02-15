@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.landing-home-contain-box {
+    margin-top: 50px;
+}
+
+.landing-home .image {
+    display: flex;
+    justify-content: center;
+}
+.landing-home .image img {
+    width: 70%;
+    height: 70%;
+}
+
+.landing-home .details {
+    display: table;
+    width: 100%;
+    height: 100%;
+    /* position: relative; */
+}
+.landing-home .details .details-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+.landing-home .details #home-heading h3 {
+    color: #41464b;
+    font-size: 45px
+}
+
+
+.btn-general {
+    border-width: 2px;
+    /* border-radius: 10; */
+    padding: 10px 20px 10px 20px;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+
+#home-heading h3 {
+    color: #21282e;
+    font-size: 55px;
+    font-weight: 700;
+    margin: 20px 0px 20px 0px;
+    text-transform: uppercase;
+}
+
+#home-btn {
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+}
+
+p {
+    color: #64707b;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+#home-btn {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.landing-home-text-box #home-btn i {
+    margin-right: 8px;
+}
+.landing-home-text-box #home-btn .btn {
+    border: 1px solid #41464b;
+    border-radius: 0;
+    color: #41464b;
+}
+.landing-home-text-box #home-btn .btn:hover {
+    color: #fff;
+    background-color: #3742fa;
+}
+.landing-home-text-box #home-btn .btn:focus {
+    background-color: #ffa502;
+}
+
+
+
+.landing-home-text-box-heading {
+    color: #ffa502;
+}
+
+.landing-home-text-box-heading-latter {
+    color: #41464b;
+}
