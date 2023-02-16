@@ -4,27 +4,26 @@ const timer = document.getElementById('landing-clock-timer');
 const clockVisible = document.getElementById('landing-home-clock');
 const clockHeading = document.getElementById('landing-home-clock-heading');
 
-const day = 4;
-const hr = 5;
-const min = 5;
-const sec = 5;
+const day = 5;
+const hr = 0;
+const min = 0;
+const sec = 0;
 
 const days = day * 86400000;
 const hours = hr * 3600000;
 const minutes = min * 60000;
 const seconds = sec * 1000;
 const setTime = days + hours + minutes + seconds;
-const startTime = Date.now();
-const futureTime = startTime + setTime;
+const startTime = new Date("Feb 20, 2023 00:00:00").getTime();
 
 const timerLoop = setInterval(countDownTimer);
 countDownTimer();
 
 function countDownTimer() {
-    const currentTime = Date.now();
-    const remainingTime = futureTime - currentTime;
+    let currentTime = Date.now();
+    const remainingTime = startTime - currentTime;
     const angle = (remainingTime / setTime) * 360;
-
+    
     // Progress Indicator
     if(angle > 180) {
         semicircle[2].style.display = 'none';
@@ -53,12 +52,14 @@ function countDownTimer() {
     <div>${secs}s</div>
     `;
 
-    // From day 0 to remaining 1 hour - blue color
-    if(remainingTime <= 86400000 && remainingTime >= 3600000) {
+    // (50%) From day 2, 12 hours to day 1, 6 hours - blue color
+    if(remainingTime <= 216000000 && remainingTime >= 108000000) {
         semicircle[0].style.backgroundColor = "#1722F7";
         semicircle[1].style.backgroundColor = "#1722F7";
 
         timer.innerHTML = `
+        <div>${ds}d</div>
+        <div class="colon">:</div>
         <div>${hrs}h</div>
         <div class="colon">:</div>
         <div>${mins}m</div>
@@ -69,12 +70,16 @@ function countDownTimer() {
         timer.style.color = "#1722F7";
     }
 
-    // Remaining 1 hour to 5 min - orange color
-    if(remainingTime < 3600000 && remainingTime >= 300000) {
+    // (25%) Remaining 1 day 6 hours to 5 min - orange color
+    if(remainingTime < 108000000 && remainingTime >= 300000) {
         semicircle[0].style.backgroundColor = "#ffa502";
         semicircle[1].style.backgroundColor = "#ffa502";
         
         timer.innerHTML = `
+        <div>${ds}d</div>
+        <div class="colon">:</div>
+        <div>${hrs}h</div>
+        <div class="colon">:</div>
         <div>${mins}m</div>
         <div class="colon">:</div>
         <div>${secs}s</div>
@@ -83,16 +88,50 @@ function countDownTimer() {
         timer.style.color = "#ffa502";
     }
 
+    // From day 0 remove day hand
+    if(remainingTime <= 86400000 && remainingTime >= 3600000) {
+        
+        timer.innerHTML = `
+        <div>${hrs}h</div>
+        <div class="colon">:</div>
+        <div>${mins}m</div>
+        <div class="colon">:</div>
+        <div>${secs}s</div>
+        `;
+
+    }
+    
+    // Remaining 1 hour to 5 min - orange color
+    if(remainingTime < 3600000 && remainingTime >= 300000) {
+        
+        timer.innerHTML = `
+        <div>${mins}m</div>
+        <div class="colon">:</div>
+        <div>${secs}s</div>
+        `;
+
+    }
+
     // Alert after 5 min left - red color
     if(remainingTime < 300000 && remainingTime >= 0) {
         semicircle[0].style.backgroundColor = "red";
         semicircle[1].style.backgroundColor = "red";
         
         timer.innerHTML = `
+        <div>${mins}m</div>
+        <div class="colon">:</div>
         <div>${secs}s</div>
         `;
 
         timer.style.color = "red";
+    }
+
+    // Remove minutes hand when a minute left
+    if(remainingTime < 60000 && remainingTime >= 0) {
+
+        timer.innerHTML = `
+        <div>${secs}s<div>`;
+
     }
 
     if(remainingTime < 0) {
